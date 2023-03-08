@@ -1,27 +1,28 @@
 import Select from "react-select";
 import "./CurrencyInput.scss";
 
-function CurrencyInput(props) {
-  const options = props.currencies.map((currency) => {
-    return { value: currency, label: currency };
-  });
+const customStyles = {
+  option: (defaultStyles) => ({
+    ...defaultStyles,
+    color: "#121e62",
+    backgroundColor: "white",
+  }),
 
-  const customStyles = {
-    option: (defaultStyles) => ({
-      ...defaultStyles,
-      color: "#121e62",
-      backgroundColor: "white",
-    }),
+  control: (defaultStyles) => ({
+    ...defaultStyles,
+    backgroundColor: "white",
+    padding: "10px",
+    border: "none",
+    boxShadow: "none",
+  }),
+  singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#121e62" }),
+};
 
-    control: (defaultStyles) => ({
-      ...defaultStyles,
-      backgroundColor: "white",
-      padding: "10px",
-      border: "none",
-      boxShadow: "none",
-    }),
-    singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#121e62" }),
-  };
+const CurrencyInput = (props) => {
+  const options = props.currencies.map((currency) => ({
+    value: currency,
+    label: currency,
+  }));
 
   return (
     <div className="group">
@@ -38,6 +39,6 @@ function CurrencyInput(props) {
       />
     </div>
   );
-}
+};
 
 export default CurrencyInput;

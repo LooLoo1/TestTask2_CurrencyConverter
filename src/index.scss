@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   background-color: white;
   padding: 25px 50px;
+  
   .logo {
     display: flex;
     align-items: center;
@@ -27,15 +28,19 @@ header {
     font-weight: 700;
     text-align: center;
   }
+
   div {
     display: flex;
     align-items: center;
     gap: 20px;
   }
+
   span {
     font-size: 20px;
   }
+
 }
+
 h1 {
   font-size: 36px;
   text-align: center;

@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 130px 120px;
 }
+
 input,
 select {
   font-size: 20px;
@@ -12,9 +13,11 @@ select {
   border: 0;
   outline-color: transparent;
 }
+
 input {
   padding-left: 10px;
 }
+
 select {
   border: 0;
   padding: 15px;

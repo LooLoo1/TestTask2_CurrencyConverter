@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CurrencyInput from "../CurrencyInput";
 
-function CurrencyConvertor({ rates }) {
+const CurrencyConvertor = ({ rates }) => {
   const [amount1, setAmount1] = useState(1);
   const [amount2, setAmount2] = useState(1);
   const [currency1, setCurrency1] = useState("USD");
